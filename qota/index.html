@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Slate Cinema × Qota — Launch Campaign Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#070A12;--ink-2:#0F1320;--ink-3:#161B2A;
+    --slate:#6AA6FF;--slate-soft:#A7CBFF;
+    --ember:#FF6A00;--ember-2:#F7931E;
+    --white:#F2F5FB;--gray:#9AA3B5;--gray-2:#5E6577;
+    --line:rgba(255,255,255,0.09);--line-strong:rgba(255,255,255,0.16);
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--ink);color:var(--white);font-family:var(--sans);
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden;}
+  body::before,body::after{content:"";position:fixed;z-index:0;pointer-events:none;
+    border-radius:50%;filter:blur(95px);opacity:.45;}
+  body::before{top:-190px;left:-130px;width:540px;height:540px;
+    background:radial-gradient(circle,rgba(106,166,255,.34),transparent 70%);}
+  body::after{bottom:-210px;right:-150px;width:560px;height:560px;
+    background:radial-gradient(circle,rgba(255,106,0,.26),transparent 70%);}
+  .stars{position:fixed;inset:0;z-index:0;pointer-events:none;}
+  .stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--slate-soft);opacity:.55;}
+  .stars i:nth-child(3n){background:#cfe0ff;}
+  .stars i:nth-child(7n){background:var(--ember-2);opacity:.5;}
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:26px 0 0;gap:16px;flex-wrap:wrap;}
+  .lockup{display:flex;align-items:center;gap:16px;}
+  .logo-slate{display:flex;align-items:baseline;gap:9px;}
+  .logo-slate .s{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--white);letter-spacing:.01em;}
+  .logo-slate .c{font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:.01em;color:var(--slate);}
+  .logo-slate .star{color:var(--slate);font-size:13px;}
+  .x{color:var(--gray-2);font-size:14px;font-weight:500;}
+  .logo-qp{font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:-.01em;color:var(--white);}
+  .logo-qp b{color:var(--ember);font-weight:700;}
+  .doc{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-2);}
+
+  .hero{padding:72px 0 56px;border-bottom:1px solid var(--line);}
+  .eyebrow{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.24em;
+    text-transform:uppercase;font-weight:600;color:var(--slate);margin-bottom:22px;}
+  .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(54px,11vw,104px);
+    line-height:.92;letter-spacing:-.02em;margin:0;color:var(--white);}
+  .hero h1 .pro{color:var(--ember);}
+  .hero .tagline{font-family:var(--serif);font-weight:400;font-style:italic;
+    font-size:clamp(20px,3.4vw,30px);color:var(--gray);margin:18px 0 0;}
+  .meta{display:flex;flex-wrap:wrap;gap:38px;margin-top:46px;}
+  .meta .item{min-width:120px;}
+  .meta .k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-2);margin-bottom:6px;}
+  .meta .v{font-size:15px;color:var(--white);font-weight:500;}
+
+  section{padding:60px 0;border-bottom:1px solid var(--line);}
+  .sec-eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:600;color:var(--slate);margin-bottom:16px;}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5vw,40px);
+    line-height:1.05;letter-spacing:-.01em;margin:0 0 22px;color:var(--white);}
+  h3{font-family:var(--sans);font-weight:600;font-size:18px;margin:0 0 8px;color:var(--white);}
+  p{margin:0 0 16px;color:#CDD3DF;}
+  p.lead{font-size:18.5px;line-height:1.62;color:#DEE3EC;}
+  strong{color:var(--white);font-weight:600;}
+  em{color:var(--slate-soft);font-style:italic;}
+  .ph{color:var(--ember-2);font-weight:600;border-bottom:1.5px dashed rgba(247,147,30,.55);padding-bottom:1px;white-space:nowrap;}
+
+  .grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr);}
+  .grid .cell{background:var(--ink-2);padding:24px 22px;}
+  .grid .cell .num{font-family:var(--mono);font-size:12px;color:var(--slate);font-weight:600;letter-spacing:.06em;margin-bottom:10px;display:block;}
+  .grid .cell h3{font-size:16px;}
+  .grid .cell p{margin:0;font-size:14.5px;color:var(--gray);}
+
+  .challenge{display:flex;gap:22px;padding:24px 0;border-top:1px solid var(--line);}
+  .challenge:first-child{border-top:none;}
+  .challenge .idx{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--slate);line-height:1;min-width:46px;}
+  .challenge .body h3{margin-bottom:6px;}
+  .challenge .body p{margin:0;font-size:14.5px;color:var(--gray);}
+  .tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ember);border:1px solid rgba(255,106,0,.4);border-radius:100px;padding:3px 10px;margin-left:10px;vertical-align:middle;font-weight:600;}
+
+  .phase{position:relative;padding:0 0 36px 34px;border-left:1px solid var(--line-strong);margin-left:6px;}
+  .phase:last-child{padding-bottom:0;}
+  .phase::before{content:"";position:absolute;left:-7px;top:4px;width:13px;height:13px;border-radius:50%;
+    background:var(--slate);box-shadow:0 0 0 4px rgba(106,166,255,.16);}
+  .phase.go::before{background:var(--ember);box-shadow:0 0 0 4px rgba(255,106,0,.16);}
+  .phase .when{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-2);margin-bottom:4px;}
+  .phase h3{margin-bottom:10px;}
+  .phase ul{margin:0;padding-left:18px;}
+  .phase li{margin-bottom:7px;color:var(--gray);font-size:14.5px;}
+  .phase li::marker{color:var(--slate);}
+
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .pillar{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:26px 22px;}
+  .pillar .lane{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);font-weight:600;margin-bottom:14px;}
+  .pillar h3{font-family:var(--serif);font-weight:600;font-size:21px;margin-bottom:10px;}
+  .pillar .qty{font-family:var(--mono);font-size:11px;color:var(--ember-2);margin-bottom:10px;letter-spacing:.04em;}
+  .pillar p{font-size:14px;color:var(--gray);margin:0;}
+
+  /* generic callout (founder content) */
+  .callout{margin-top:22px;background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--ember);
+    border-radius:12px;padding:24px 26px;display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;}
+  .callout.blue{border-left-color:var(--slate);}
+  .callout .cl{font-family:var(--serif);font-size:20px;color:var(--ember);font-weight:600;min-width:170px;}
+  .callout.blue .cl{color:var(--slate);}
+  .callout p{margin:0;font-size:14.5px;color:var(--gray);flex:1;min-width:240px;}
+  .callout .rprice{font-family:var(--mono);font-size:12px;color:var(--slate-soft);letter-spacing:.06em;margin-top:8px;}
+
+  .pkg{background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid rgba(255,106,0,.45);border-radius:18px;padding:36px 34px;
+    box-shadow:0 0 0 1px rgba(255,106,0,.08),0 40px 80px -40px rgba(255,106,0,.35);}
+  .pkg .pkg-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:18px;padding-bottom:22px;border-bottom:1px solid var(--line);}
+  .pkg .pkg-head .name{font-family:var(--serif);font-size:26px;font-weight:600;color:var(--white);}
+  .pkg .pkg-head .sub{font-size:13px;color:var(--gray);margin-top:6px;max-width:430px;}
+  .pkg .price{text-align:right;}
+  .pkg .price .amt{font-family:var(--serif);font-size:40px;font-weight:600;color:var(--ember);line-height:1;}
+  .pkg .price .term{font-family:var(--mono);font-size:10.5px;color:var(--gray);letter-spacing:.12em;text-transform:uppercase;margin-top:8px;}
+  .pkg ul.incl{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;}
+  .pkg ul.incl li{position:relative;padding-left:26px;font-size:14.5px;color:#CDD3DF;}
+  .pkg ul.incl li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:2px;background:var(--ember);transform:rotate(45deg);}
+
+  .breakdown{width:100%;border-collapse:collapse;margin-top:30px;font-size:14.5px;}
+  .breakdown th,.breakdown td{text-align:left;padding:13px 0;border-bottom:1px solid var(--line);}
+  .breakdown th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-2);font-weight:600;}
+  .breakdown td:last-child,.breakdown th:last-child{text-align:right;white-space:nowrap;}
+  .breakdown td .desc{display:block;font-size:12.5px;color:var(--gray);margin-top:3px;}
+  .breakdown tr.total td{border-bottom:none;border-top:1px solid var(--line-strong);
+    font-family:var(--serif);font-size:18px;color:var(--white);font-weight:600;padding-top:16px;}
+  .breakdown tr.total td:last-child{color:var(--ember);}
+  .note{font-size:13px;color:var(--gray-2);font-style:italic;margin-top:14px;}
+
+  /* advertising table */
+  .adblock{margin-top:34px;background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
+  .adblock h3{font-family:var(--serif);font-size:20px;margin-bottom:4px;}
+  .adblock .ad-sub{font-size:13px;color:var(--gray);margin-bottom:18px;}
+  .adtable{width:100%;border-collapse:collapse;font-size:14px;}
+  .adtable th,.adtable td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:right;}
+  .adtable th:first-child,.adtable td:first-child{text-align:left;}
+  .adtable th{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-2);font-weight:600;}
+  .adtable td{color:#CDD3DF;}
+  .adtable .chan{color:var(--white);font-weight:600;}
+  .adtable tr.sum td{border-bottom:none;border-top:1px solid var(--line-strong);font-weight:600;color:var(--white);padding-top:14px;}
+  .adtable tr.sum td:last-child{color:var(--ember);}
+  .adnote{font-size:12.5px;color:var(--gray-2);font-style:italic;margin-top:14px;}
+
+  .retainer{margin-top:30px;background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--slate);border-radius:12px;
+    padding:24px 26px;display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;}
+  .retainer .rl{font-family:var(--serif);font-size:20px;color:var(--slate);font-weight:600;min-width:170px;}
+  .retainer p{margin:0;font-size:14.5px;color:var(--gray);flex:1;min-width:240px;}
+  .retainer .rprice{font-family:var(--mono);font-size:12px;color:var(--slate-soft);letter-spacing:.06em;margin-top:8px;}
+
+  .alc{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .alc .opt{background:var(--ink-2);padding:22px;}
+  .alc .opt .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
+  .alc .opt h3{font-size:15.5px;margin:0;}
+  .alc .opt .cost{font-family:var(--mono);font-size:11px;color:var(--ember-2);font-weight:600;white-space:nowrap;letter-spacing:.04em;}
+  .alc .opt p{margin:8px 0 0;font-size:13.5px;color:var(--gray);}
+
+  .why .row{display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--line);}
+  .why .row:first-of-type{border-top:none;}
+  .why .row .lbl{font-family:var(--serif);font-size:18px;color:var(--slate);min-width:230px;font-weight:600;}
+  .why .row p{margin:0;color:var(--gray);font-size:14.5px;}
+
+  .steps{counter-reset:step;list-style:none;margin:0;padding:0;}
+  .steps li{counter-increment:step;position:relative;padding:16px 0 16px 52px;border-top:1px solid var(--line);color:#CDD3DF;font-size:15.5px;}
+  .steps li:first-child{border-top:none;}
+  .steps li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:14px;
+    font-family:var(--mono);font-size:13px;color:var(--slate);font-weight:600;border:1px solid rgba(106,166,255,.4);border-radius:50%;
+    width:32px;height:32px;display:flex;align-items:center;justify-content:center;}
+
+  footer{padding:54px 0 70px;text-align:center;}
+  footer .lockup{justify-content:center;margin-bottom:18px;}
+  footer .slogan{font-style:italic;color:var(--gray);font-family:var(--serif);margin:0 0 20px;}
+  footer .contact{font-family:var(--mono);font-size:12px;color:var(--gray);letter-spacing:.04em;}
+  footer .contact span{color:var(--slate);margin:0 8px;}
+
+  @media (max-width:720px){
+    .grid.cols-2{grid-template-columns:1fr;}
+    .pillars{grid-template-columns:1fr;}
+    .pkg ul.incl{grid-template-columns:1fr;}
+    .alc{grid-template-columns:1fr;}
+    .why .row{flex-direction:column;gap:6px;}
+    .why .row .lbl{min-width:0;}
+    .meta{gap:24px;}
+    .adtable{font-size:12.5px;}
+    .adtable th,.adtable td{padding:9px 6px;}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  @media print{
+    body{background:#fff;color:#111;}
+    body::before,body::after,.stars{display:none;}
+    .logo-slate .s,.logo-qp{color:#111;}
+    section,.hero{border-color:#ddd;}
+    .pkg{box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+<div class="stars">
+  <i style="top:8%;left:14%"></i><i style="top:12%;left:62%"></i><i style="top:6%;left:88%"></i>
+  <i style="top:22%;left:33%"></i><i style="top:30%;left:78%"></i><i style="top:18%;left:50%"></i>
+  <i style="top:44%;left:9%"></i><i style="top:52%;left:91%"></i><i style="top:60%;left:24%"></i>
+  <i style="top:68%;left:70%"></i><i style="top:74%;left:42%"></i><i style="top:82%;left:14%"></i>
+  <i style="top:88%;left:60%"></i><i style="top:38%;left:58%"></i><i style="top:64%;left:48%"></i>
+  <i style="top:15%;left:6%"></i><i style="top:48%;left:66%"></i><i style="top:78%;left:86%"></i>
+</div>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="lockup">
+      <span class="logo-slate"><span class="s">Slate</span><span class="c">Cinema</span><span class="star">✦</span></span>
+      <span class="x">×</span>
+      <span class="logo-qp"><b>Q</b>ota</span>
+    </div>
+    <div class="doc">Proposal · June 2026</div>
+  </div>
+
+  <header class="hero">
+    <span class="eyebrow">Slate Cinema × Qota — 8-Week Launch Campaign</span>
+    <h1><span class="pro">Q</span>ota</h1>
+    <div style="font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--ember-2);margin-top:14px;">Calculate · Quote · Close</div>
+    <p class="tagline">Brand Build, Content &amp; Lead Generation</p>
+    <div class="meta">
+      <div class="item"><div class="k">Prepared For</div><div class="v">Moy Bemaras, Founder</div></div>
+      <div class="item"><div class="k">Company</div><div class="v">Qota · qotapro.com</div></div>
+      <div class="item"><div class="k">Prepared By</div><div class="v">Slate Cinema</div></div>
+      <div class="item"><div class="k">Date</div><div class="v">June 18, 2026</div></div>
+      <div class="item"><div class="k">Start</div><div class="v">July 1, 2026</div></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-eyebrow">The Company</div>
+    <h2>A homeowner-first contractor marketplace, ready to launch.</h2>
+    <p class="lead">Qota flips the model. Instead of homeowners chasing quotes and pros paying ~$80 a lead, a homeowner posts a project once, nearby pros are notified instantly, and the bids come to them. Pros pay nothing per lead — Qota earns through a small convenience fee and an optional Featured Pro tier, with funds held in escrow until the job is done so homeowners are protected end to end.</p>
+    <p>Built from the ground up by founder Moy Bemaras, Qota is at the launch line: the app is built and a pro pipeline is ready, but the brand has no public presence yet. This campaign exists to change that — to make Qota <strong>look and feel like a real, trusted, national company from day one</strong>, and to build the advertising engine that turns that presence into signups.</p>
+  </section>
+
+  <section>
+    <div class="sec-eyebrow">Primary Objectives</div>
+    <h2>What this campaign is built to do.</h2>
+    <div class="grid cols-2">
+      <div class="cell"><span class="num">01</span><h3>Build a legit brand presence</h3><p>Professional, on-brand Instagram, TikTok &amp; Facebook profiles that make Qota look established — the credibility everything else sits on.</p></div>
+      <div class="cell"><span class="num">02</span><h3>Strategy first</h3><p>A clear, founder-friendly 8-week roadmap so you're never guessing what comes next across content, posting, ads, and influencers.</p></div>
+      <div class="cell"><span class="num">03</span><h3>A content bank before launch</h3><p>9 UGC creator videos, 10 social-styled video ads, 10 owner-filmed edits, and an animated explainer — produced during the build so you hit the ground running.</p></div>
+      <div class="cell"><span class="num">04</span><h3>Build the lead-gen engine</h3><p>A marketing system for lead generation through online advertising — Google &amp; YouTube plus Meta/Instagram boosted and paid social — wired in from day one to turn awareness into homeowner and pro signups.</p></div>
+      <div class="cell"><span class="num">05</span><h3>Drive awareness &amp; virality</h3><p>Relatable, shareable content plus the influencer and paid-boost engine to amplify what works.</p></div>
+      <div class="cell"><span class="num">06</span><h3>Set the foundation to scale</h3><p>Prove the concept in the launch window, built to expand city by city — Miami → NY/NJ → national.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-eyebrow">Where Qota Is Now</div>
+    <h2>What we're solving for, in priority order.</h2>
+    <div class="challenge"><div class="idx">1</div><div class="body">
+      <h3>No public brand presence<span class="tag">Highest priority</span></h3>
+      <p>The app is built and pros are lined up, but there's no Instagram, no content, nothing that signals "real company." Before Qota can court influencers or run ads, it needs a legit presence for them to point to. This is the single biggest blocker to everything else.</p>
+    </div></div>
+    <div class="challenge"><div class="idx">2</div><div class="body">
+      <h3>Pre-launch means no real jobs to document — yet</h3>
+      <p>With Qota not live, there's no existing job footage or testimonials. That's fine for launch: early content tells the <em>story</em> of what Qota does — relatable scripted scenarios, UGC, AI/stock-style visuals — rather than documenting real jobs. Once live, every job becomes future content.</p>
+    </div></div>
+    <div class="challenge"><div class="idx">3</div><div class="body">
+      <h3>No marketing playbook</h3>
+      <p>You're sharp on the product and the business model but don't have a marketing plan — and you want a partner who builds the strategy, not one who hands you homework. The plan itself is a core deliverable here.</p>
+    </div></div>
+    <div class="challenge"><div class="idx">4</div><div class="body">
+      <h3>A make-or-break launch window</h3>
+      <p>By your own framing, the first stretch makes or breaks the concept. The campaign hits hard and fast, builds a strong foundation, then reassesses — rather than committing to a long, slow burn before the concept is proven.</p>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="sec-eyebrow">Our Approach</div>
+    <h2>The 8-Week Launch Foundation.</h2>
+    <p class="lead">A strategy-led starter campaign built for a brand at launch stage. Instead of posting random content on day one, we spend the first phase building the foundation — strategy, brand presence, a content bank, and the lead-gen advertising engine — then go live with momentum.</p>
+    <div style="margin-top:34px;">
+      <div class="phase">
+        <div class="when">≈ Weeks 1–6</div>
+        <h3>Phase 1 — Foundation &amp; Content Build</h3>
+        <ul>
+          <li>Lock brand strategy, content pillars, and the full 8-week roadmap</li>
+          <li>Build &amp; optimize the social profiles (Instagram-first, plus TikTok &amp; Facebook)</li>
+          <li>Cast 3 vouching creators and produce 9 UGC videos, 10 social-styled video ads + 10 owner-filmed edits</li>
+          <li>Direct &amp; edit founder content; produce the 60-second animated explainer</li>
+          <li>Stand up the lead-gen advertising system — Google/YouTube + Meta/IG: tracking, audiences, and creative</li>
+          <li><em>Meanwhile, you onboard pros so supply is ready when homeowner demand arrives</em></li>
+        </ul>
+      </div>
+      <div class="phase go">
+        <div class="when">≈ Weeks 6–8</div>
+        <h3>Phase 2 — Launch &amp; Amplify</h3>
+        <ul>
+          <li>First posts go live; consistent posting cadence begins</li>
+          <li>Google/YouTube + Meta/IG campaigns go live; boosted &amp; paid social behind top performers</li>
+          <li>Activate influencer &amp; paid distribution</li>
+          <li>Track performance and report on reach, signups, and cost per result</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="when">End of Week 8</div>
+        <h3>Reassess &amp; Continue</h3>
+        <ul>
+          <li>Review the data together and decide the next move — most clients continue on a monthly retainer</li>
+          <li>Scale what's working; layer in add-ons (more ad spend, influencers, OOH, NY/NJ) as the concept proves out</li>
+          <li>Deliberately not over-committing before the concept is proven — that protects your budget</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-eyebrow">Content Strategy</div>
+    <h2>Three lanes, one story.</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="lane">Lane 01</div>
+        <h3>Relatable &amp; UGC</h3>
+        <div class="qty">9 videos · 3 creators</div>
+        <p>3 vouching creators (actors) we cast and direct, each producing 3 scripted videos — the homeowner who finally found trustworthy pros. Built to be boosted.</p>
+      </div>
+      <div class="pillar">
+        <div class="lane">Lane 02</div>
+        <h3>Brand &amp; Explainer</h3>
+        <div class="qty">Animated + founder</div>
+        <p>The 60-second animated how-it-works video, plus founder content with Moy on camera — the pieces that make Qota read as established and trustworthy.</p>
+      </div>
+      <div class="pillar">
+        <div class="lane">Lane 03</div>
+        <h3>Social Ads &amp; Hype</h3>
+        <div class="qty">10 video ads</div>
+        <p>10 social-styled video ads — a mix of AI/stock and real footage — posted across each platform and engineered to travel, with ad spend and influencer reach behind them.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="cl">Founder Content</div>
+      <div>
+        <p>You told us you're ready to be the face of the brand — that's a major trust asset for a marketplace. <strong>You record, we run it.</strong> We write the scripts and a simple shot list, direct you remotely so it's low-lift on your end, then edit everything into polished, on-brand pieces. No production crew required — just you, your phone, and our direction. <strong>Plus 10 edits of your own captured clips</strong> — film moments throughout your week and we'll cut them into ready-to-post videos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-eyebrow">The Package</div>
+    <h2>Your investment.</h2>
+    <div class="pkg">
+      <div class="pkg-head">
+        <div>
+          <div class="name">8-Week Launch Foundation</div>
+          <div class="sub">The core campaign — a lean, minimal-involvement baseline that gets Qota launched. Everything beyond it is add-on, so you scale up only where you want to.</div>
+        </div>
+        <div class="price">
+          <div class="amt">$10,500</div>
+          <div class="term">8-Week Core</div>
+        </div>
+      </div>
+      <ul class="incl">
+        <li>Full 8-week launch strategy &amp; roadmap</li>
+        <li>Social presence build-out (IG / TikTok / FB)</li>
+        <li>9 UGC videos — 3 vouching creators × 3</li>
+        <li>10 social-styled video ads (AI/stock + real)</li>
+        <li>Founder content + 10 owner UGC edits — you film, we edit</li>
+        <li>60-second animated explainer video</li>
+        <li>Lead-gen advertising system (Google/YouTube + Meta/IG)</li>
+        <li>Posting, scheduling &amp; boosting cadence</li>
+        <li>Performance reporting &amp; strategy check-ins</li>
+        <li>End-of-campaign review &amp; retainer plan</li>
+      </ul>
+    </div>
+
+    <table class="breakdown">
+      <thead><tr><th>Core Component</th><th>Investment</th></tr></thead>
+      <tbody>
+        <tr><td>Launch Strategy &amp; 8-Week Roadmap<span class="desc">Content pillars, posting plan, distribution &amp; promo concepts</span></td><td>$1,500</td></tr>
+        <tr><td>Social Presence Build-Out<span class="desc">Profile setup &amp; optimization across IG, TikTok, FB</span></td><td>$1,000</td></tr>
+        <tr><td>UGC Creator Content — 9 videos<span class="desc">3 vouching creators (actors) × 3 videos · incl. casting $400 × 3 = $1,200</span></td><td>$3,000</td></tr>
+        <tr><td>10 Social-Styled Video Ads<span class="desc">AI/stock + real footage, posted across each platform</span></td><td>$2,000</td></tr>
+        <tr><td>Founder Content + 10 Owner UGC Edits<span class="desc">You record &amp; film · we script, direct &amp; edit into polished posts</span></td><td>$1,500</td></tr>
+        <tr><td>60-Sec Animated Explainer<span class="desc">Homepage promo with voiceover</span></td><td>$1,500</td></tr>
+        <tr class="total"><td>Total — 8-Week Core (Minimal Involvement)</td><td>$10,500</td></tr>
+      </tbody>
+    </table>
+    <p class="note">The lead-gen advertising system setup is run through the ad management below. Influencer talent fees and any ad spend beyond the base are scoped separately (see À La Carte).</p>
+
+    <!-- ONLINE ADVERTISING -->
+    <div class="adblock">
+      <h3>Online Advertising — Lead Generation</h3>
+      <div class="ad-sub">Paid acquisition running through the launch. Management is Slate's fee; ad budget is paid to the platforms.</div>
+      <table class="adtable">
+        <thead><tr><th>Channel</th><th>Management</th><th>Ad Budget</th><th>Monthly</th></tr></thead>
+        <tbody>
+          <tr><td class="chan">Google Ads <span style="color:var(--gray);font-weight:400">(Search + YouTube)</span></td><td>$1,000</td><td>$1,000</td><td>$2,000</td></tr>
+          <tr><td class="chan">Meta Ads <span style="color:var(--gray);font-weight:400">(Facebook + Instagram)</span></td><td>$1,000</td><td>$1,000</td><td>$2,000</td></tr>
+          <tr class="sum"><td>Combined</td><td>$2,000</td><td>$2,000</td><td>$4,000 / mo</td></tr>
+        </tbody>
+      </table>
+      <div class="adnote">Over the 8-week launch (~2 months): ≈ $8,000 total — $4,000 management + $4,000 ad budget.</div>
+      <div class="callout blue" style="margin-top:20px;">
+        <div class="cl">Cascade scaling</div>
+        <div>
+          <p>We don't dump the budget on day one. Spend <strong>starts slow</strong> across a spread of creatives and audiences, then we review performance <strong>every week</strong> and cascade budget into the highest-performing ads, platforms, and audiences — scaling winners up and cutting what isn't converting. By the back half of the campaign, the spend is concentrated behind proven performers.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RETAINER -->
+    <div class="retainer">
+      <div class="rl">Built to continue.</div>
+      <div>
+        <p>The 8-week campaign is the on-ramp, not the finish line. It's structured to flow straight into an optional <strong>monthly retainer</strong> once the concept is proven — we reassess at week 8 and scale what's working (content volume, ad management, new cities) without rebuilding from scratch.</p>
+        <div class="rprice">Ongoing retainer — <span class="ph">[ TBD / month ]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-eyebrow">À La Carte Add-Ons</div>
+    <h2>Scale the campaign up to your ambition.</h2>
+    <p style="margin-bottom:28px;color:var(--gray);">The core keeps Slate's involvement lean. These are the pieces we think you'll likely want as the launch gains traction — added only when you want them.</p>
+    <div class="alc">
+      <div class="opt"><div class="top"><h3>Partnership Outreach — Verified Influencers</h3><span class="cost"><span class="ph">[ TBD ]</span></span></div><p>We run outreach to land <strong>verified influencers</strong> (the Ben Soffer / "Boy With No Job"-style creators) to plug Qota to their audiences. Slate handles sourcing, vetting, outreach &amp; coordination; influencer fees pass through.</p></div>
+      <div class="opt"><div class="top"><h3>On-Request OOH Advertising</h3><span class="cost"><span class="ph">On request</span></span></div><p>Billboards, digital screens, and out-of-home placements in <strong>local Miami areas</strong> — sourced and managed on request to put Qota in front of homeowners offline. Priced per placement.</p></div>
+      <div class="opt"><div class="top"><h3>Scale Ad Spend / Add Channels</h3><span class="cost"><span class="ph">[ TBD ]</span> + spend</span></div><p>Increase the Google/Meta budgets beyond the $1,000+$1,000 base, or add channels (TikTok ads, etc.) as campaigns prove ROI. Additional management scales with spend.</p></div>
+      <div class="opt"><div class="top"><h3>More Creators / Higher Volume</h3><span class="cost"><span class="ph">[ TBD ]</span></span></div><p>Add UGC creators beyond the 3, or more videos per creator, to keep the content bank deep.</p></div>
+      <div class="opt"><div class="top"><h3>Second-City Activation (NY/NJ)</h3><span class="cost"><span class="ph">[ TBD ]</span></span></div><p>Extend the campaign to the second market. Running two cities at once roughly multiplies ad cost — recommended to prove Miami first, then roll out NY/NJ as "Campaign Two."</p></div>
+      <div class="opt"><div class="top"><h3>Website / Landing Page Support</h3><span class="cost"><span class="ph">[ TBD ]</span></span></div><p>Landing pages, web-video placement, and deeper traffic tracking &amp; analytics to support the ad campaigns.</p></div>
+      <div class="opt"><div class="top"><h3>Additional Premium Videos</h3><span class="cost"><span class="ph">[ TBD ]</span></span></div><p>Extra explainer or hero videos beyond the core package.</p></div>
+      <div class="opt"><div class="top"><h3>Ongoing Monthly Retainer</h3><span class="cost"><span class="ph">[ TBD ]</span></span></div><p>Continue past the 8 weeks — sustained content, ad management, and reporting to keep momentum after launch.</p></div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="sec-eyebrow">Why Slate Cinema</div>
+    <h2>Why us.</h2>
+    <div class="row"><div class="lbl">We build brands from zero</div><p>Qota is a near-greenfield launch — exactly the "make it look legit, fast" build we specialize in.</p></div>
+    <div class="row"><div class="lbl">Strategy + execution, one roof</div><p>You wanted a partner who owns the plan and runs it without handing you homework. That's how we operate — pre-production, production, post, distribution, and the ad engine all in-house.</p></div>
+    <div class="row"><div class="lbl">Content that travels</div><p>Our work routinely pulls hundreds of thousands to millions of views because we make content people actually want to watch — the foundation for the virality you're after.</p></div>
+    <div class="row"><div class="lbl">Trusted by serious brands</div><p>From small startups to household names, we're a trusted marketing agency that delivers results — with work for Smash House, Alo, Meta, and B&amp;H, among others.</p></div>
+  </section>
+
+  <section>
+    <div class="sec-eyebrow">Next Steps</div>
+    <h2>How we get moving.</h2>
+    <ol class="steps">
+      <li>Confirm the core package, advertising spend, and any à la carte add-ons</li>
+      <li>Quick strategy call to finalize scope</li>
+      <li>Sign + deposit to secure the July 1 start</li>
+      <li>Week 1 kickoff — strategy, brand build, content, and ad-system setup begin</li>
+    </ol>
+    <p style="margin-top:26px;">We're ready to start the build the week of <strong>July 1</strong>, which sets up a launch with real momentum behind it. The sooner it's signed, the stronger the foundation we can build before going live.</p>
+  </section>
+
+  <footer>
+    <div class="lockup">
+      <span class="logo-slate"><span class="s">Slate</span><span class="c">Cinema</span><span class="star">✦</span></span>
+      <span class="x">×</span>
+      <span class="logo-qp"><b>Q</b>ota</span>
+    </div>
+    <div class="slogan">Storytellers of the 21st Century</div>
+    <div class="contact">jake@slatecinema.com<span>·</span>(845) 798-0603<span>·</span>www.slatecinema.com</div>
+  </footer>
+
+</div>
+</body>
+</html>
